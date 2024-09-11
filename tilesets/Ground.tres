@@ -1,0 +1,29 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bmvirlxj6k75g"]
+
+[ext_resource type="Texture2D" uid="uid://bnhhhh36862o0" path="res://assets/sprites/tilesets/Ground.png" id="1_ihsm5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pty3f"]
+texture = ExtResource("1_ihsm5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_pty3f")

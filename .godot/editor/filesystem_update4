@@ -1,0 +1,4 @@
+res://scenes/misc/characters/player.tscn
+res://scenes/levels/test/test_level.tscn
+res://tilesets/Ground.tres
+res://scripts/misc/player/player.gd
