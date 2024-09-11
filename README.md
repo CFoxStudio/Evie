@@ -18,10 +18,10 @@ See [Contributing to Evie](https://docs.celestial-fox.com/books/contributing-to-
   - LucePric
   - Andus
 - GitHub Contributors:
-  - <a href="https://github.com/CFoxStudio/Evie/graphs/contributors"><img src="https://contrib.rocks/image?repo=CFoxStudio/Evie&max=100&columns=12" width=425px /></a>
+<a href="https://github.com/CFoxStudio/Evie/graphs/contributors"><img src="https://contrib.rocks/image?repo=CFoxStudio/Evie&max=20&columns=12" width=128px /></a>
 
 ## Licenses:
-**Code:** [LICENSE](https://github.com/CFoxStudio/Evie/blob/main/LICENSE)
+**Code:** [LICENSE](https://github.com/CFoxStudio/Evie/blob/main/LICENSE.md)
 
 **Our Assets (Art, Music, etc.):** <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" /></a>
 <br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

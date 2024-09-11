@@ -1,10 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://c760d8xvto2hb"]
+[gd_scene load_steps=8 format=3 uid="uid://c760d8xvto2hb"]
 
 [ext_resource type="Script" path="res://scripts/misc/player/player.gd" id="1_in2gg"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="2_rpyk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1weqv"]
 size = Vector2(19, 48)
+
+[sub_resource type="Animation" id="Animation_8p12w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_rpyk7")]
+}
 
 [sub_resource type="Animation" id="Animation_2p1el"]
 resource_name = "idle"
@@ -21,25 +48,26 @@ tracks/0/keys = {
 "values": [2]
 }
 
-[sub_resource type="Animation" id="Animation_8p12w"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_7wra8"]
+resource_name = "walk"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2]
+"values": [ExtResource("2_rpyk7")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_54vbi"]
 _data = {
 "RESET": SubResource("Animation_8p12w"),
-"idle": SubResource("Animation_2p1el")
+"idle": SubResource("Animation_2p1el"),
+"walk": SubResource("Animation_7wra8")
 }
 
 [node name="Player" type="CharacterBody2D"]
