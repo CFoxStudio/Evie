@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c760d8xvto2hb"]
+[gd_scene load_steps=24 format=3 uid="uid://c760d8xvto2hb"]
 
 [ext_resource type="Script" path="res://scripts/misc/player/player.gd" id="1_in2gg"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="2_rpyk7"]
@@ -129,6 +129,18 @@ animation = &"walk_down"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_drf6g"]
 animation = &"walk_up"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nlof5"]
+animation = &"walk_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2gf3r"]
+animation = &"walk_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fr3a1"]
+animation = &"walk_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rxdfb"]
+animation = &"walk_up"
+
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_jf2hq"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_7n8di")
 blend_point_0/pos = Vector2(-1, 0)
@@ -138,6 +150,14 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_tqcet")
 blend_point_2/pos = Vector2(0, 1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_drf6g")
 blend_point_3/pos = Vector2(0, -1)
+blend_point_4/node = SubResource("AnimationNodeAnimation_nlof5")
+blend_point_4/pos = Vector2(-1, 1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_2gf3r")
+blend_point_5/pos = Vector2(1, 1)
+blend_point_6/node = SubResource("AnimationNodeAnimation_fr3a1")
+blend_point_6/pos = Vector2(1, -1)
+blend_point_7/node = SubResource("AnimationNodeAnimation_rxdfb")
+blend_point_7/pos = Vector2(-1, -1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i5ri1"]
@@ -171,7 +191,9 @@ shape = SubResource("RectangleShape2D_1weqv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
-position_smoothing_speed = 1.0
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 2.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
