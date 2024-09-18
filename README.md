@@ -5,7 +5,11 @@ Made with [![Godot Engine](https://img.shields.io/badge/Godot-%23FFFFFF.svg?logo
 ## How to install the game?
 Download the game from [![Github Releases](https://img.shields.io/badge/Github-000000?logo=github)](https://github.com/CFoxStudio/Evie/releases) or [![Game Jolt](https://img.shields.io/badge/Game%20Jolt-000000?logo=gamejolt)](https://gamejolt.com/games/evie/922690)
 
-Available for: ![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0) ![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
+Available for: ![Windows](https://img.shields.io/badge/Windows-blue) ![Linux](https://img.shields.io/badge/Linux-FCC624) ![Android](https://img.shields.io/badge/Android-3DDC84)
+ ![UWP](https://img.shields.io/badge/Xbox%20(UWP)-107C10)
+
+
+<!-- ![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0) <- Too much steps to export -->
 
 ## Contributing & Modding:
 See [Contributing to Evie](https://docs.celestial-fox.com/books/contributing-to-evie) or [Modding Evie](https://docs.celestial-fox.com/books/evie-modding)
@@ -17,8 +21,8 @@ See [Contributing to Evie](https://docs.celestial-fox.com/books/contributing-to-
 - Artists:
   - LucePric
   - Andus
-**GitHub Contributors:**
-<a href="https://github.com/CFoxStudio/Evie/graphs/contributors"><img src="https://contrib.rocks/image?repo=CFoxStudio/Evie&max=20&columns=12" width=128px /></a>
+**GitHub Contributors:**<br>
+<a href="https://github.com/CFoxStudio/Evie/graphs/contributors"><img src="https://contrib.rocks/image?repo=CFoxStudio/Evie&max=100&columns=12" width=32px /></a>
 
 ## Licenses:
 **Code:** [LICENSE](https://github.com/CFoxStudio/Evie/blob/main/LICENSE.md)

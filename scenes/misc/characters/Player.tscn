@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://c760d8xvto2hb"]
 
-[ext_resource type="Script" path="res://scripts/misc/player/player.gd" id="1_in2gg"]
+[ext_resource type="Script" path="res://scripts/misc/player/Player.gd" id="1_in2gg"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="2_rpyk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1weqv"]
