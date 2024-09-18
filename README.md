@@ -21,6 +21,7 @@ See [Contributing to Evie](https://docs.celestial-fox.com/books/contributing-to-
 - Artists:
   - LucePric
   - Andus
+
 **GitHub Contributors:**<br>
 <a href="https://github.com/CFoxStudio/Evie/graphs/contributors"><img src="https://contrib.rocks/image?repo=CFoxStudio/Evie&max=100&columns=12" width=32px /></a>
 
