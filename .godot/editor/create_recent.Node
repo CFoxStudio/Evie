@@ -1,4 +1,5 @@
 ChapterNode
+Panel
 Button
 VBoxContainer
 HBoxContainer
@@ -12,4 +13,3 @@ Control
 SubViewport
 AnimationTree
 AnimatedSprite2D
-Camera2D

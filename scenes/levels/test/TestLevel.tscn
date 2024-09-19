@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://d0scq2kiik7eg"]
+[gd_scene load_steps=4 format=4 uid="uid://d0scq2kiik7eg"]
 
 [ext_resource type="TileSet" uid="uid://bmvirlxj6k75g" path="res://tilesets/Ground.tres" id="1_2qhos"]
 [ext_resource type="PackedScene" uid="uid://c760d8xvto2hb" path="res://scenes/misc/characters/Player.tscn" id="2_yp4xu"]
+[ext_resource type="Script" path="res://scripts/custom_nodes/ChapterNode.gd" id="3_ic7en"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -11,3 +12,9 @@ tile_set = ExtResource("1_2qhos")
 
 [node name="Player" parent="." instance=ExtResource("2_yp4xu")]
 position = Vector2(267, 154)
+
+[node name="ChapterNode" type="Node" parent="."]
+script = ExtResource("3_ic7en")
+chapter_num = -1
+act_num = -1
+chapter_name = "The Test Level"

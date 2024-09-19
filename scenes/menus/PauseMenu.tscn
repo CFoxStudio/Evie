@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgybbjrlnok7o"]
 
 [ext_resource type="Theme" uid="uid://dny81bwjm036y" path="res://themes/MainTheme.tres" id="1_cy0ov"]
-[ext_resource type="Script" path="res://scripts/menus/pause_menu.gd" id="1_oxi3j"]
+[ext_resource type="Script" path="res://scripts/menus/PauseMenu.gd" id="1_oxi3j"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oxi3j")
 metadata/_edit_lock_ = true
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ChAct" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -25,9 +33,9 @@ layout_mode = 2
 text = "Chapter - Act"
 metadata/_edit_lock_ = true
 
-[node name="ChapterActNames" type="Label" parent="ChAct"]
+[node name="ChapterName" type="Label" parent="ChAct"]
 layout_mode = 2
-text = "ChName - ActName"
+text = "ChName"
 metadata/_edit_lock_ = true
 
 [node name="Center" type="VBoxContainer" parent="."]

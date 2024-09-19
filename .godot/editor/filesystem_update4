@@ -1,2 +1,9 @@
 res://scenes/menus/PauseMenu.tscn
 res://tilesets/Ground.tres
+res://scripts/custom_nodes/ChapterNode.gd
+res://scenes/levels/test/TestLevel.tscn
+res://scenes/menus/MainMenu.tscn
+res://scripts/menus/pause_menu.gd
+res://scripts/menus/PauseMenu.gd
+res://scenes/misc/characters/Player.tscn
+res://scenes/misc/utils/SceneTransition.tscn
