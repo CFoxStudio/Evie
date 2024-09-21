@@ -1,9 +1,14 @@
+<<<<<<< Updated upstream
 ChapterNode
 Panel
+=======
+Label
+TextureRect
+Sprite2D
+>>>>>>> Stashed changes
 Button
 VBoxContainer
 HBoxContainer
-Label
 PanelContainer
 AnimationPlayer
 ColorRect
@@ -12,4 +17,7 @@ TouchScreenButton
 Control
 SubViewport
 AnimationTree
+<<<<<<< Updated upstream
 AnimatedSprite2D
+=======
+>>>>>>> Stashed changes
