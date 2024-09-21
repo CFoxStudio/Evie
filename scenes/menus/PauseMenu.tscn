@@ -1,20 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgybbjrlnok7o"]
 
+[ext_resource type="Script" path="res://scripts/menus/PauseMenu.gd" id="1_a8odv"]
 [ext_resource type="Theme" uid="uid://dny81bwjm036y" path="res://themes/MainTheme.tres" id="1_cy0ov"]
-[ext_resource type="Script" path="res://scripts/menus/PauseMenu.gd" id="1_oxi3j"]
 
-[node name="PauseMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_oxi3j")
-metadata/_edit_lock_ = true
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_a8odv")
 
 [node name="Background" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,24 +14,22 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ChAct" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_right = 160.0
-offset_bottom = 56.0
+process_mode = 3
+offset_right = 131.0
+offset_bottom = 50.0
 alignment = 1
 
-[node name="ChapterActNumbers" type="Label" parent="ChAct"]
+[node name="Chapter" type="Label" parent="ChAct"]
 layout_mode = 2
-text = "Chapter - Act"
-metadata/_edit_lock_ = true
+size_flags_horizontal = 0
+text = "Chapter X: Name"
 
-[node name="ChapterName" type="Label" parent="ChAct"]
+[node name="Act" type="Label" parent="ChAct"]
 layout_mode = 2
-text = "ChName"
-metadata/_edit_lock_ = true
+size_flags_horizontal = 0
+text = "Act X: Name"
 
 [node name="Center" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -61,18 +51,17 @@ horizontal_alignment = 1
 [node name="Buttons" type="VBoxContainer" parent="Center"]
 layout_mode = 2
 
-[node name="ContinueButton" type="Button" parent="Center/Buttons"]
+[node name="ResumeButton" type="Button" parent="Center/Buttons"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../ExitButton")
 theme = ExtResource("1_cy0ov")
-text = "Continue"
-metadata/_edit_lock_ = true
+text = "Resume"
 
 [node name="ExitButton" type="Button" parent="Center/Buttons"]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../ContinueButton")
+focus_neighbor_bottom = NodePath("../ResumeButton")
 theme = ExtResource("1_cy0ov")
 text = "Exit"
-metadata/_edit_lock_ = true
 
+[connection signal="pressed" from="Center/Buttons/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Center/Buttons/ExitButton" to="." method="_on_exit_button_pressed"]

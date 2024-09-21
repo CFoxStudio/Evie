@@ -3,7 +3,7 @@
 Made with [![Godot Engine](https://img.shields.io/badge/Godot-%23FFFFFF.svg?logo=godot-engine)](https://godotengine.org)
 
 ## How to install the game?
-Download the game from [![Github Releases](https://img.shields.io/badge/Github-000000?logo=github)](https://github.com/CFoxStudio/Evie/releases) or [![Game Jolt](https://img.shields.io/badge/Game%20Jolt-000000?logo=gamejolt)](https://gamejolt.com/games/evie/922690)
+Download the game from [![Game Jolt](https://img.shields.io/badge/Game%20Jolt-000000?logo=gamejolt)](https://gamejolt.com/games/evie/922690) or [![Github Releases](https://img.shields.io/badge/Github-000000?logo=github)](https://github.com/CFoxStudio/Evie/releases)
 
 Available for: ![Windows](https://img.shields.io/badge/Windows-blue) ![Linux](https://img.shields.io/badge/Linux-FCC624) ![Android](https://img.shields.io/badge/Android-3DDC84)
  ![UWP](https://img.shields.io/badge/Xbox%20(UWP)-107C10)
