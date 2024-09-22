@@ -4,6 +4,9 @@ var pause_menu_scene = preload("res://scenes/menus/PauseMenu.tscn")
 var pause_menu_instance: CanvasLayer = null
 var is_paused = false
 
+func _ready():
+	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
+
 func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()

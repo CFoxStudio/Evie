@@ -205,3 +205,5 @@ autoplay = "idle"
 tree_root = SubResource("AnimationNodeStateMachine_kt7fi")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Walk/blend_position = Vector2(-0.000819027, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
