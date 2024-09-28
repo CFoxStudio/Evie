@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	$MainButtons/PlayButton.grab_focus()
+	$Panel/MainButtons/PlayButton.grab_focus()
 
 func _on_play_button_pressed():
 	SceneTransition.fade("res://scenes/levels/test/TestLevel.tscn")
