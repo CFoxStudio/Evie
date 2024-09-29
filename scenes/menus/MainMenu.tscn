@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/menus/MainMenu.gd" id="2_ml8au"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nj7wh"]
-bg_color = Color(0.351563, 0.351563, 0.351563, 0.6)
+bg_color = Color(0.352941, 0.352941, 0.352941, 0.352941)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -61,6 +61,24 @@ text = "Exit"
 alignment = 0
 metadata/_edit_lock_ = true
 
+[node name="GameJoltButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 8.0
+offset_right = -16.0
+offset_bottom = 53.0
+grow_horizontal = 0
+focus_neighbor_top = NodePath("../Panel/MainButtons/ExitButton")
+focus_neighbor_bottom = NodePath("../Panel/MainButtons/ExitButton")
+theme = ExtResource("1_klcc7")
+theme_override_colors/font_focus_color = Color(0.184314, 0.498039, 0.435294, 1)
+theme_override_colors/font_color = Color(0.8, 1, 0, 1)
+disabled = true
+text = "Game Jolt"
+alignment = 2
+
 [connection signal="pressed" from="Panel/MainButtons/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Panel/MainButtons/SettingsButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Panel/MainButtons/ExitButton" to="." method="_on_exit_button_pressed"]

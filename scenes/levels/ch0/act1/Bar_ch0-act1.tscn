@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsqo6jhnpl18j"]
+
+[ext_resource type="Script" path="res://scripts/custom_nodes/ChapterNode.gd" id="1_vj8ye"]
+[ext_resource type="PackedScene" uid="uid://c760d8xvto2hb" path="res://scenes/misc/characters/Player.tscn" id="2_40mab"]
+
+[node name="Bar" type="Node2D"]
+
+[node name="ChapterNode" type="Node" parent="."]
+script = ExtResource("1_vj8ye")
+chapter_name = "Prologue"
+act_name = "Intro"
+act_num = "1"
+
+[node name="Player" parent="." instance=ExtResource("2_40mab")]
+position = Vector2(267, 154)

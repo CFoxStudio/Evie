@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Evie"
 run/main_scene="res://scenes/menus/Intro.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Evie"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false

@@ -42,6 +42,8 @@ func chapter_info():
 		if chapter_node != null:
 			var chapter_number = chapter_node.chapter_num
 			var chapter_name = chapter_node.chapter_name
+			var act_number = chapter_node.act_num
+			var act_name = chapter_node.act_name
 			
 			pause_menu_instance.get_node("ChAct/Chapter").text = "Chapter " + str(chapter_number) + ": " + chapter_name
-			pause_menu_instance.get_node("ChAct/Act").text = "Act " + str(chapter_number) + ": " + chapter_name
+			pause_menu_instance.get_node("ChAct/Act").text = "Act " + str(act_number) + ": " + act_name
