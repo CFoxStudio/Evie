@@ -3,7 +3,7 @@ extends Node
 var chapter : int = 0
 var act : int = 0
 
-const SAVE_PATH = "user://save_game.json"
+const SAVE_PATH = "user://save/save.json"
 
 func save_game(ch: int, a: int):
 	var save_data = {
@@ -13,6 +13,7 @@ func save_game(ch: int, a: int):
 	chapter = ch
 	act = a
 	
+	# TODO: Add check for directory
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data))
 	file.close()
@@ -44,9 +45,10 @@ func load_scene_from_save():
 		var scene_name = file.get_as_text().strip_edges()
 		file.close()
 		var scene_path = "res://scenes/levels/ch%d/act%d/%s" % [chapter, act, scene_name]
-
+		
 		if ResourceLoader.exists(scene_path):
 			var scene = load(scene_path)
+			
 			if scene:
 				SceneTransition.fade(scene_path)
 			else:
