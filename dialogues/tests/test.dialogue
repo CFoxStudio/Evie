@@ -1,8 +1,0 @@
-~ test_node
-Andus: Hey, this is some test dialogue.
-~ random_words
-Nathan: One of 3 words should appear here: [[Pineapple|On|Pizza]]
-- Do it again! => random_words
-- Bye => END
-
-=> END
