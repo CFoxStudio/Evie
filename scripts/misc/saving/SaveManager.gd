@@ -32,6 +32,7 @@ func load_game():
 		print("No save file found. Starting fresh.")
 		chapter = 0
 		act = 0
+	load_scene_from_save()
 
 func save_exists():
 	return FileAccess.file_exists(SAVE_PATH)
@@ -47,7 +48,7 @@ func load_scene_from_save():
 		if ResourceLoader.exists(scene_path):
 			var scene = load(scene_path)
 			if scene:
-				SceneTransition.fade(scene)
+				SceneTransition.fade(scene_path)
 			else:
 				print("Failed to load scene: %s" % scene_path)
 		else:

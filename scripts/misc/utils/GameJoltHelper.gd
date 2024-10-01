@@ -2,11 +2,7 @@ extends Node
 
 var config = ConfigFile.new()
 var credentials_file = "user://credentials.cfg"
-
-var trophie: String
-
-func _init():
-	GameJolt.trophies_fetch_completed.connect(_on_trophies_fetch_completed)
+var logged_in: bool = false
 
 func save_login(user: String, token: String):
 	config.set_value("credentials", "username", user)
@@ -30,21 +26,21 @@ func login():
 		GameJolt.set_user_name(username)
 		GameJolt.set_user_token(token)
 		GameJolt.users_auth()
-		
-		print("Logged in with saved credentials: ", username)
+		GameJolt.users_auth_completed.connect(_on_users_auth_completed.bind(username))
 	else:
 		print("No saved credentials found.")
 
-func trophy(trophy_id: String):
-	print("Connecting to trophies_fetch_completed signal...")
-	trophie = trophy_id
-	GameJolt.trophies_fetch(true)
+func is_logged_in():
+	return logged_in
 
-func _on_trophies_fetch_completed(trophies: Dictionary):
-	print("Got to connect")
-	var trophy_id = trophie
+func trophy(trophy_id: String):
+	if (is_logged_in()):
+		
+		GameJolt.trophies_fetch_completed.connect(_on_trophies_fetch_completed.bind(trophy_id))
+		GameJolt.trophies_fetch(true)
+
+func _on_trophies_fetch_completed(trophies: Dictionary, trophy_id: String):
 	var already_has_trophy = false
-	
 	for trophy in trophies.get("trophies"):
 		if str(trophy.id) == trophy_id:
 			already_has_trophy = true
@@ -55,3 +51,11 @@ func _on_trophies_fetch_completed(trophies: Dictionary):
 	else:
 		print("Awarding trophy: ", trophy_id)
 		GameJolt.trophies_add_achieved(trophy_id)
+
+func _on_users_auth_completed(success: bool, username: String):
+	if success:
+		logged_in = true
+		print("Logged in with saved credentials: ", username)
+	else:
+		logged_in = false
+		print("Could not login to Game Jolt")
