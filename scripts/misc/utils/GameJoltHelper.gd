@@ -33,16 +33,15 @@ func login():
 func is_logged_in():
 	return logged_in
 
-func trophy(trophy_id: String):
+func trophy(trophy_id: int):
 	if (is_logged_in()):
-		
 		GameJolt.trophies_fetch_completed.connect(_on_trophies_fetch_completed.bind(trophy_id))
 		GameJolt.trophies_fetch(true)
 
-func _on_trophies_fetch_completed(trophies: Dictionary, trophy_id: String):
+func _on_trophies_fetch_completed(trophies: Dictionary, trophy_id: int):
 	var already_has_trophy = false
 	for trophy in trophies.get("trophies"):
-		if str(trophy.id) == trophy_id:
+		if trophy.id == trophy_id:
 			already_has_trophy = true
 			break
 
