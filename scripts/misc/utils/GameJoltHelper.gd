@@ -48,7 +48,7 @@ func _on_trophies_fetch_completed(trophies: Dictionary, trophy_id: int):
 	if already_has_trophy:
 		print("Player already has the trophy: ", trophy_id)
 	else:
-		print("Awarding trophy: ", trophy_id)
+		print("Awarding GJ trophy: ", trophy_id)
 		GameJolt.trophies_add_achieved(trophy_id)
 
 func _on_users_auth_completed(success: bool, username: String):
