@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bixlnwvgp4pi6"]
+
+[ext_resource type="Texture2D" uid="uid://fw5lyigt0gu1" path="res://addons/gamejolt/icon.png" id="1_8hcuh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trcqd"]
+bg_color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="Notification" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -448.0
+offset_bottom = 96.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_trcqd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(48, 48)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("1_8hcuh")

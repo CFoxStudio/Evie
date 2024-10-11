@@ -38,15 +38,18 @@ QuestManager="*res://scripts/misc/saving/QuestManager.gd"
 [dialogic]
 
 directories/dch_directory={
-"Evie": "res://dialogues/characters/Evie.dch"
+"Evie": "res://dialogues/characters/Evie.dch",
+"Person1": "res://dialogues/characters/placeholders/Person1.dch",
+"Person2": "res://dialogues/characters/placeholders/Person2.dch"
 }
 directories/dtl_directory={
+"GameIntro": "res://dialogues/dialogues/ch0/act1/GameIntro.dtl",
 "Test": "res://dialogues/dialogues/tests/Test.dtl"
 }
 glossary/default_case_sensitive=true
 glossary/glossary_files=[]
-layout/style_list=[]
-layout/default_style="res://dialogues/styles/New_File.tres"
+layout/style_list=["res://dialogues/Theme.tres"]
+layout/default_style="res://dialogues/Theme.tres"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
