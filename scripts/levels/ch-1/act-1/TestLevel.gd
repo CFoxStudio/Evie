@@ -7,6 +7,13 @@ var godot2_found = false
 
 func _ready():
 	QuestManager.create("Godot Fan", "Find and click on 2 Godot icons", 2)
+	
+	#var cutscene_actions = [
+	#{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 300), "speed": 120},
+	#{"type": "wait", "time": 1.5},
+	#{"type": "move_npc", "npc": $Player, "target_position": Vector2(200, 200), "speed": 80},
+#]
+	#CutsceneManager.start_cutscene(cutscene_actions)
 
 func _input(event):
 	if is_player_inside_godot1 and event.is_action_pressed("interact") and !godot1_found:

@@ -2,18 +2,19 @@ extends CharacterBody2D
 
 @export var speed = 100
 @export var sprint_multiplier = 1.30
+var can_move = true
 
 func get_input() -> Vector2:
 	var input_vector = Vector2()
-	
-	if Input.is_action_pressed('up'):
-		input_vector.y -= 1
-	if Input.is_action_pressed('down'):
-		input_vector.y += 1
-	if Input.is_action_pressed('left'):
-		input_vector.x -= 1
-	if Input.is_action_pressed('right'):
-		input_vector.x += 1
+	if (can_move):
+		if Input.is_action_pressed('up'):
+			input_vector.y -= 1
+		if Input.is_action_pressed('down'):
+			input_vector.y += 1
+		if Input.is_action_pressed('left'):
+			input_vector.x -= 1
+		if Input.is_action_pressed('right'):
+			input_vector.x += 1
 
 	return input_vector.normalized()
 
@@ -32,3 +33,6 @@ func _physics_process(_delta):
 		$AnimationTree.get("parameters/playback").travel("Idle")
 
 	move_and_slide()
+
+func allow_movement(allow: bool):
+	can_move = allow;
