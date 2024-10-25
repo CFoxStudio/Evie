@@ -34,7 +34,6 @@ PauseManager="*res://scripts/misc/utils/PauseManager.gd"
 SaveManager="*res://scripts/misc/saving/SaveManager.gd"
 AchievementManager="*res://scripts/misc/saving/AchievementManager.gd"
 QuestManager="*res://scripts/misc/saving/QuestManager.gd"
-CutsceneManager="*res://scripts/misc/utils/CutsceneManager.gd"
 
 [dialogic]
 

@@ -1,11 +1,10 @@
-# CutsceneManager.gd
 extends Node
 
 signal cutscene_started
 signal cutscene_finished
 
 @export var player: Node
-var cutscene_camera: Camera2D
+@export var cutscene_camera: Camera2D
 
 var action_queue: Array = []
 var current_action_index := 0
@@ -23,6 +22,7 @@ func start_cutscene(actions: Array) -> void:
 	is_running = true
 	action_queue = actions
 	current_action_index = 0
+	player.allow_movement(false);
 
 	emit_signal("cutscene_started")
 	if cutscene_camera:
@@ -55,3 +55,4 @@ func _end_cutscene() -> void:
 		cutscene_camera.current = false
 	emit_signal("cutscene_finished")
 	is_running = false
+	player.allow_movement(true);
