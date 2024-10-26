@@ -30,6 +30,9 @@ func _process_next_action() -> void:
 	if current_action_index >= action_queue.size():
 		_end_cutscene()
 		return
+	
+	if (Dialogic.timeline_ended.is_connected(_process_next_action)):
+		Dialogic.timeline_ended.disconnect(_process_next_action)
 
 	var action = action_queue[current_action_index]
 	current_action_index += 1
@@ -37,6 +40,8 @@ func _process_next_action() -> void:
 	match action["type"]:
 		"move_npc":
 			_move_npc(action["npc"], action["target_position"], action.get("speed", 100))
+		"show_dialogue":
+			_show_dialogue(action["timeline"])
 		"wait":
 			await get_tree().create_timer(action["time"]).timeout
 			_process_next_action()
@@ -58,6 +63,9 @@ func _move_npc(npc: Node2D, target_position: Vector2, speed: float) -> void:
 		animation_tree.get("parameters/playback").call("travel", "Idle")
 	_process_next_action()
 
+func _show_dialogue(timeline: Variant):
+	Dialogic.timeline_ended.connect(_process_next_action)
+	Dialogic.start(timeline)
 
 func _end_cutscene() -> void:
 	player.allow_movement(true)

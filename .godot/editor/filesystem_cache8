@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1729962815
+::res://::1729973940
 default_bus_layout.tres::AudioBusLayout::458714825460520870::1726930523::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1726233942::0::1::::<><>::
 icon.png::CompressedTexture2D::3704147171636374156::1726172709::1726992919::1::::<><>::
@@ -1115,8 +1115,7 @@ evie_worried.png::CompressedTexture2D::4220744755916617799::1729952542::17299603
 ground.png::CompressedTexture2D::3313764227144462025::1727621242::1727621250::1::::<><>::
 ::res://data/::1727980417
 achievements.json::JSON::-1::1727980417::0::1::::<><>::
-::res://dialogues/::1729962837
-Theme.tres::Resource/DialogicStyle::9219975138126566965::1729961964::0::1::::<><>::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>res://addons/dialogic/Resources/dialogic_style.gd
+::res://dialogues/::1729962839
 ::res://dialogues/characters/::1729961410
 Evie.dch::Resource::-1::1729961410::0::1::::<><>::
 ::res://dialogues/characters/placeholders/::1729865232
@@ -1126,9 +1125,10 @@ Person2.dch::Resource::-1::1729865232::0::1::::<><>::
 ::res://dialogues/dialogues/ch0/::1729865232
 ::res://dialogues/dialogues/ch0/act1/::1729952542
 GameIntro.dtl::Resource::-1::1729952542::0::1::::<><>::
-::res://dialogues/dialogues/tests/::1729962814
-Test.dtl::Resource::-1::1729962814::0::1::::<><>::
-::res://dialogues/themes/::1729962837
+::res://dialogues/dialogues/tests/::1729962842
+Test.dtl::Resource::-1::1729962842::0::1::::<><>::
+::res://dialogues/themes/::1729962844
+Theme.tres::Resource/DialogicStyle::9219975138126566965::1729962844::0::1::::<><>::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>res://addons/dialogic/Resources/dialogic_style.gd
 ::res://mods/::1729960370
 ::res://mods-unpacked/::1729960383
 ::res://mod_loader/::1727609074
@@ -1147,9 +1147,9 @@ Bar_ch0-act1.tscn::PackedScene::3683755794887373947::1727628163::0::1::::<><>::r
 FirstScene.txt::TextFile::-1::1727803108::0::1::::<><>::
 ::res://scenes/levels/ch1/::1725569982
 ::res://scenes/levels/ch-1/::1727803108
-::res://scenes/levels/ch-1/act-1/::1729962815
+::res://scenes/levels/ch-1/act-1/::1729962982
 FirstScene.txt::TextFile::-1::1727803108::0::1::::<><>::
-TestLevel.tscn::PackedScene::8951293382244302302::1729962815::0::1::::<><>::uid://bmvirlxj6k75g::::res://tilesets/Ground.tres<>res://scripts/levels/ch-1/act-1/TestLevel.gd<>uid://c760d8xvto2hb::::res://scenes/misc/characters/Player.tscn<>res://scripts/custom_nodes/ChapterNode.gd<>uid://c478va0nkl3wc::::res://assets/misc/godot.svg<>res://scripts/misc/utils/CutsceneManager.gd
+TestLevel.tscn::PackedScene::8951293382244302302::1729962982::0::1::::<><>::uid://bmvirlxj6k75g::::res://tilesets/Ground.tres<>res://scripts/levels/ch-1/act-1/TestLevel.gd<>uid://c760d8xvto2hb::::res://scenes/misc/characters/Player.tscn<>res://scripts/custom_nodes/ChapterNode.gd<>uid://c478va0nkl3wc::::res://assets/misc/godot.svg<>res://scripts/misc/utils/CutsceneManager.gd
 ::res://scenes/menus/::1729962815
 Intro.tscn::PackedScene::8747407308480583849::1729962815::0::1::::<><>::uid://chovdrmy3e8oo::::res://assets/misc/logo.png<>res://scripts/menus/Intro.gd
 MainMenu.tscn::PackedScene::7856569398830260983::1729962814::0::1::::<><>::uid://dny81bwjm036y::::res://themes/MainTheme.tres<>res://scripts/menus/MainMenu.gd
