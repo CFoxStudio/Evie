@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=6 format=3 uid="uid://xy52vqkvlfh5"]
+[gd_scene load_steps=6 format=3 uid="uid://dwvkrxsf04f82"]
 
 [ext_resource type="Texture2D" uid="uid://chovdrmy3e8oo" path="res://assets/misc/logo.png" id="1_kelyl"]
 [ext_resource type="Script" path="res://scripts/menus/Intro.gd" id="1_mprpy"]
@@ -40,11 +39,6 @@ _data = {
 "RESET": SubResource("Animation_iw5eg"),
 "fade": SubResource("Animation_0176i")
 }
-=======
-[gd_scene load_steps=2 format=3 uid="uid://xy52vqkvlfh5"]
-
-[ext_resource type="Texture2D" uid="uid://chovdrmy3e8oo" path="res://assets/misc/logo.png" id="1_kelyl"]
->>>>>>> Stashed changes
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -53,10 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-<<<<<<< Updated upstream
 script = ExtResource("1_mprpy")
-=======
->>>>>>> Stashed changes
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -91,7 +82,6 @@ theme_override_font_sizes/font_size = 32
 text = "CelestialFox Studio"
 horizontal_alignment = 1
 vertical_alignment = 1
-<<<<<<< Updated upstream
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -106,5 +96,3 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_x1xbf")
 }
-=======
->>>>>>> Stashed changes

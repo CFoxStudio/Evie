@@ -1,4 +1,6 @@
+[style name="Theme"]
 join Evie (Default) leftmost
 Evie (Default): Hey!
-Evie (Worried): I'm worried..
-Evie (Default): And now I'm not!
+Evie (Default): I'm Evie!
+Evie (Default): What you just saw was a short test cutscene!
+leave Evie [length="1.0" wait="true"]

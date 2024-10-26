@@ -48,8 +48,8 @@ directories/dtl_directory={
 }
 glossary/default_case_sensitive=true
 glossary/glossary_files=[]
-layout/style_list=["res://dialogues/Theme.tres"]
-layout/default_style="res://dialogues/Theme.tres"
+layout/style_list=["res://dialogues/themes/Theme.tres"]
+layout/default_style=""
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

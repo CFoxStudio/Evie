@@ -9,10 +9,10 @@ func _ready():
 	QuestManager.create("Godot Fan", "Find and click on 2 Godot icons", 2)
 	
 	var cutscene_actions = [
-		{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 300), "speed": 80},
-		{"type": "wait", "time": 1.5},
-		{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 200), "speed": 60}
+		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 100), "speed": 40},
+		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 200), "speed": 40}
 	]
+	$CutsceneManager.connect("cutscene_finished", Callable(self, "_on_test_cutscene_finished"))
 	$CutsceneManager.start_cutscene(cutscene_actions)
 
 func _input(event):
@@ -38,3 +38,6 @@ func _on_godot_2_body_entered(body):
 func _on_godot_2_body_exited(body):
 	if body.name == "Player":
 		is_player_inside_godot2 = false
+
+func _on_test_cutscene_finished():
+	Dialogic.start("res://dialogues/dialogues/tests/Test.dtl")

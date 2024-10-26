@@ -51,7 +51,7 @@ shape = SubResource("CircleShape2D_unmxv")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_yp4xu")]
-position = Vector2(267, 154)
+position = Vector2(150, 100)
 
 [node name="CutsceneManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("6_5iufs")
