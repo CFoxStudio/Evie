@@ -2,5 +2,3 @@ join Evie (Default) leftmost
 Evie (Default): Hey!
 Evie (Worried): I'm worried..
 Evie (Default): And now I'm not!
-[text_input text="What:"]
-if {""} == "":

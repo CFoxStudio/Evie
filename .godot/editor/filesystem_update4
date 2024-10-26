@@ -1,0 +1,10 @@
+res://scenes/levels/ch-1/act-1/TestLevel.tscn
+res://dialogues/Theme.tres
+res://tilesets/Ground.tres
+res://scripts/misc/utils/CutsceneManager.gd
+res://scenes/menus/MainMenu.tscn
+res://scenes/misc/characters/Player.tscn
+res://scripts/misc/player/Player.gd
+res://scripts/levels/ch-1/act-1/TestLevel.gd
+res://dialogues/characters/Evie.dch
+res://dialogues/dialogues/ch0/act1/GameIntro.dtl

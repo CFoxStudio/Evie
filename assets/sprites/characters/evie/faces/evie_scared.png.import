@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1etbxgoo7wj4"
-path="res://.godot/imported/evie_worried.png-046ebd6215502b281243be29d75c9e1c.ctex"
+uid="uid://8uarbrcsrfkv"
+path="res://.godot/imported/evie_scared.png-d2a42bd927ac93e0d6fc641d13624de8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/evie/faces/evie_worried.png"
-dest_files=["res://.godot/imported/evie_worried.png-046ebd6215502b281243be29d75c9e1c.ctex"]
+source_file="res://assets/sprites/characters/evie/faces/evie_scared.png"
+dest_files=["res://.godot/imported/evie_scared.png-d2a42bd927ac93e0d6fc641d13624de8.ctex"]
 
 [params]
 

@@ -9,10 +9,10 @@ func _ready():
 	QuestManager.create("Godot Fan", "Find and click on 2 Godot icons", 2)
 	
 	var cutscene_actions = [
-	{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 300), "speed": 120},
-	{"type": "wait", "time": 1.5},
-	{"type": "move_npc", "npc": $Player, "target_position": Vector2(200, 200), "speed": 80},
-]
+		{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 300), "speed": 80},
+		{"type": "wait", "time": 1.5},
+		{"type": "move_npc", "npc": $Player, "target_position": Vector2(300, 200), "speed": 60}
+	]
 	$CutsceneManager.start_cutscene(cutscene_actions)
 
 func _input(event):

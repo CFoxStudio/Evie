@@ -4,7 +4,6 @@ signal cutscene_started
 signal cutscene_finished
 
 @export var player: Node
-@export var cutscene_camera: Camera2D
 
 var action_queue: Array = []
 var current_action_index := 0
@@ -12,7 +11,7 @@ var is_running := false
 
 func _ready() -> void:
 	if player:
-		cutscene_camera = player.get_node("Camera2D")
+		player.allow_movement(false)
 	else:
 		push_error("CutsceneManager: 'player' is not assigned in the Inspector")
 
@@ -25,10 +24,6 @@ func start_cutscene(actions: Array) -> void:
 	player.allow_movement(false);
 
 	emit_signal("cutscene_started")
-	if cutscene_camera:
-		cutscene_camera.current = true
-	else:
-		push_error("CutsceneManager: 'cutscene_camera' is not assigned or invalid.")
 	_process_next_action()
 
 func _process_next_action() -> void:
@@ -47,12 +42,25 @@ func _process_next_action() -> void:
 			_process_next_action()
 
 func _move_npc(npc: Node2D, target_position: Vector2, speed: float) -> void:
+	var direction = (target_position - npc.position).normalized()
+	var distance = npc.position.distance_to(target_position)
+	
 	var tween = create_tween()
-	tween.tween_property(npc, "position", target_position, npc.position.distance_to(target_position) / speed)
-	tween.finished.connect(_process_next_action)
+	tween.tween_property(npc, "position", target_position, distance / speed)
+
+	var animation_tree = npc.get_node("AnimationTree") if npc.has_node("AnimationTree") else null
+	if animation_tree:
+		animation_tree.get("parameters/playback").call("travel", "Walk")
+		animation_tree.set("parameters/Walk/blend_position", direction)
+
+	await tween.finished
+	if animation_tree:
+		animation_tree.get("parameters/playback").call("travel", "Idle")
+	_process_next_action()
+
+
 func _end_cutscene() -> void:
-	if cutscene_camera:
-		cutscene_camera.current = false
+	player.allow_movement(true)
 	emit_signal("cutscene_finished")
 	is_running = false
 	player.allow_movement(true);

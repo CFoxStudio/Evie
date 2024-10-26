@@ -1,8 +1,8 @@
 I'm Evie. I work in the "Horseshoe Bar". (This line is to be changed later)
-join Evie (Default) center
+join Evie (Default) leftmost
 Evie (Default): Chaos, shouting, and clamor were always a daily occurrence here.
 Evie (Default): Usually, these were just drunken ramblings about how things used to be better or loud, intoxicated teenagers ordering round after round of drinks.
-Evie (Default): But today was unusually quiet; only whispers could be heard instead of the usual shouting. All I kept hearing was “the King”. Eventually, I couldn’t take it anymore. 
+Evie (Default): But today was unusually quiet; only whispers could be heard instead of the usual shouting. All I kept hearing was “the King”. Eventually, I couldn’t take it anymore.
 Evie (Default): When I heard about it again, I decided to eavesdrop.
 leave Evie
 Person1: Hey, did you hear what the King supposedly did?
@@ -10,6 +10,6 @@ Person2: Yeah, everyone’s talking about it! I can’t believe what he did to t
 After hearing this, I decided to move closer so I could hear better.
 Person2: They say he’s already banished seven innocent Elven families from the Kingdom.
 I turned pale.
-WHAT?!? The King is banishing Elves from the kingdom?!? B-But why?? Why would he do that? King Cyril was known for his tolerance towards other races!
-Calm down, Evie! It’s probably just drunken nonsense; it can’t be true!
+Evie (Worried): WHAT?!? The King is banishing Elves from the kingdom?!? B-But why?? Why would he do that? King Cyril was known for his tolerance towards other races!
+Evie (Worried): Calm down, Evie! It’s probably just drunken nonsense; it can’t be true!
 # Transition from black screen to Horseshoe Bar

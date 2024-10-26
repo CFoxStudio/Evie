@@ -1,0 +1,14 @@
+Label
+TextureRect
+Sprite2D
+Button
+VBoxContainer
+HBoxContainer
+PanelContainer
+AnimationPlayer
+ColorRect
+CanvasLayer
+TouchScreenButton
+Control
+SubViewport
+AnimationTree
