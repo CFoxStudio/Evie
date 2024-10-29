@@ -2,5 +2,5 @@
 join Evie (Default) leftmost
 Evie (Default): Hey!
 Evie (Default): I'm Evie!
-Evie (Default): What you just saw was a short test cutscene!
+Evie (Happy): And this was a short cutscene!
 leave Evie [length="1.0" wait="true"]

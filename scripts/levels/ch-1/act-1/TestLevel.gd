@@ -10,7 +10,6 @@ func _ready():
 	
 	var cutscene_actions = [
 		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 100), "speed": 40},
-		{"type": "wait", "time": 0.5},
 		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 200), "speed": 40},
 		{"type": "show_dialogue", "timeline": "res://dialogues/dialogues/tests/Test.dtl"}
 	]
