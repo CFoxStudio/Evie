@@ -1,6 +1,10 @@
+Node2D
+Sprite2D
+CollisionShape2D
+Area2D
+CharacterBody2D
 Label
 TextureRect
-Sprite2D
 Button
 VBoxContainer
 HBoxContainer
@@ -9,6 +13,3 @@ AnimationPlayer
 ColorRect
 CanvasLayer
 TouchScreenButton
-Control
-SubViewport
-AnimationTree

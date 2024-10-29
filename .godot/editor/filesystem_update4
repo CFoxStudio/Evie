@@ -2,7 +2,10 @@ res://scenes/levels/ch-1/act-1/TestLevel.tscn
 res://dialogues/themes/Theme.tres
 res://tilesets/Ground.tres
 res://scripts/misc/utils/CutsceneManager.gd
-res://scenes/menus/MainMenu.tscn
 res://scripts/levels/ch-1/act-1/TestLevel.gd
+res://scenes/menus/MainMenu.tscn
 res://scenes/misc/characters/Player.tscn
 res://scenes/menus/Intro.tscn
+res://scripts/misc/utils/GameUtils.gd
+res://scripts/misc/debug/ConsoleManager.gd
+res://dialogues/dialogues/tests/Wait.dtl

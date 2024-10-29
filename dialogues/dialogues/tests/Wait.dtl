@@ -1,0 +1,6 @@
+[style name="Theme"]
+join Evie (Worried) leftmost
+Evie (Worried): Wait...
+Evie (Scared): You're.. me?
+update Evie rightmost
+Evie (Worried): ...

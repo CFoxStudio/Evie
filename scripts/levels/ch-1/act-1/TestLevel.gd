@@ -1,9 +1,8 @@
 extends Node2D
 
-var is_player_inside_godot1 = false
 var godot1_found = false
-var is_player_inside_godot2 = false
 var godot2_found = false
+var evie_npc: Node = null
 
 func _ready():
 	QuestManager.create("Godot Fan", "Find and use the action button on 2 Godot icons", 2)
@@ -11,30 +10,27 @@ func _ready():
 	var cutscene_actions = [
 		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 100), "speed": 40},
 		{"type": "move_npc", "npc": $Player, "target_position": Vector2(275, 200), "speed": 40},
-		{"type": "show_dialogue", "timeline": "res://dialogues/dialogues/tests/Test.dtl"}
+		{"type": "show_dialogue", "timeline": "res://dialogues/dialogues/tests/Test.dtl"},
+		{"type": "animate_npc", "npc": $Player, "animation": "jump", "speed": 50}
 	]
 	$CutsceneManager.start_cutscene(cutscene_actions)
+	evie_npc = $EvieButNPC
 
-func _input(event):
-	if is_player_inside_godot1 and event.is_action_pressed("interact") and !godot1_found:
-		godot1_found = true
-		QuestManager.add_progress("Godot Fan", 1)
-	elif is_player_inside_godot2 and event.is_action_pressed("interact") and !godot2_found:
-		godot2_found = true
-		QuestManager.add_progress("Godot Fan", 1)
-
-func _on_godot_1_body_entered(body):
-	if body.name == "Player":
-		is_player_inside_godot1 = true
-
-func _on_godot_1_body_exited(body):
-	if body.name == "Player":
-		is_player_inside_godot1 = false
-
-func _on_godot_2_body_entered(body):
-	if body.name == "Player":
-		is_player_inside_godot2 = true
-
-func _on_godot_2_body_exited(body):
-	if body.name == "Player":
-		is_player_inside_godot2 = false
+func _process(delta):
+	if GameUtils.is_inside_area($QuestGodots/Godot1, $Player):
+		if Input.is_action_just_pressed("interact") and !godot1_found:
+			godot1_found = true
+			QuestManager.add_progress("Godot Fan", 1)
+	if GameUtils.is_inside_area($QuestGodots/Godot2, $Player):
+		if Input.is_action_just_pressed("interact") and !godot2_found:
+			godot2_found = true
+			QuestManager.add_progress("Godot Fan", 1)
+	if evie_npc and GameUtils.is_inside_area($EvieButNPC, $Player):
+		if Input.is_action_just_pressed("interact"):
+			var evie_cutscene = [
+				{"type": "show_dialogue", "timeline": "res://dialogues/dialogues/tests/Wait.dtl"},
+				{"type": "animate_npc", "npc": $EvieButNPC, "animation": "move", "target_position": Vector2(520, -50), "speed": 10},
+				{"type": "destroy_npc", "npc": $EvieButNPC}
+			]
+			$CutsceneManager.start_cutscene(evie_cutscene)
+			evie_npc = null
