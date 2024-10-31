@@ -63,5 +63,15 @@ focus_neighbor_bottom = NodePath("../ResumeButton")
 theme = ExtResource("1_cy0ov")
 text = "Exit"
 
+[node name="TimeLabel" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 80.0
+grow_vertical = 0
+text = "00:00:00"
+vertical_alignment = 2
+
 [connection signal="pressed" from="Center/Buttons/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Center/Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
