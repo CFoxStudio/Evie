@@ -1,8 +1,0 @@
-res://scenes/levels/ch-1/act-1/TestLevel.tscn
-res://dialogues/themes/Theme.tres
-res://tilesets/Ground.tres
-res://scenes/menus/MainMenu.tscn
-res://scenes/misc/characters/Player.tscn
-res://scenes/menus/Intro.tscn
-res://scenes/menus/PauseMenu.tscn
-res://scripts/menus/PauseMenu.gd
