@@ -64,7 +64,7 @@ func load_scene_from_save():
 			var scene = ResourceLoader.load(scene_path)
 			
 			if scene:
-				SceneTransition.fade(scene_path) # Assuming you have a SceneTransition handler
+				SceneTransition.fade(scene_path)
 			else:
 				print("Failed to load scene: %s" % scene_path)
 		else:

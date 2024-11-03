@@ -3,7 +3,7 @@ extends Control
 func _ready():
 	GameJoltHelper.login()
 	AchievementManager.unlock_achievement("First Signal")
-	$Panel/MainButtons/PlayButton.grab_focus()
+	$CanvasLayer/Panel/MainButtons/PlayButton.grab_focus()
 
 func _on_play_button_pressed():
 	if (SaveManager.save_exists()):

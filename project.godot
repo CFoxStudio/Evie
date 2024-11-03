@@ -88,7 +88,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/controller_icons/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gamejolt/plugin.cfg", "res://addons/simply-console/plugin.cfg")
+enabled=PackedStringArray("res://addons/controller_icons/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gamejolt/plugin.cfg", "res://addons/simply-console/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
 
 [game_jolt]
 
