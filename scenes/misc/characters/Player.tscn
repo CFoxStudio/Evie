@@ -220,11 +220,12 @@ parameters/Walk/blend_position = Vector2(-0.00166667, -0.0212766)
 
 [node name="Virtual Joystick" parent="UI" instance=ExtResource("3_emfa2")]
 modulate = Color(0.25098, 0.25098, 0.25098, 1)
-offset_top = -250.0
-offset_right = 250.0
+offset_top = -272.0
+offset_right = 272.0
 offset_bottom = 0.0
 deadzone_size = 1.0
 clampzone_size = 60.0
+joystick_mode = 1
 visibility_mode = 1
 action_left = "left"
 action_right = "right"

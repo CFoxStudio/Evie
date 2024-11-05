@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @export var speed: float = 100
 @export var sprint_multiplier: float = 1.3
-@export var joystick_left: VirtualJoystick
-@export var joystick_right: VirtualJoystick
 
 var can_move: bool = true
 var cutscene_manager = null
@@ -32,3 +30,6 @@ func _physics_process(delta):
 
 func allow_movement(allow: bool):
 	can_move = allow
+
+func show_interact_button(show: bool):
+	$UI/Buttons/ControlButtonsContainer/InteractionButton.visible = show

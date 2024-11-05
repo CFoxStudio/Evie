@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Evie"
+config/version="v0.1"
 run/main_scene="res://scenes/menus/Intro.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Evie"
@@ -83,7 +84,7 @@ translation/add_separator=false
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [editor_plugins]
@@ -97,6 +98,10 @@ config/global/private_key="3df6f69972f5401a0e818aa2b4d75d78"
 config/debug/enabled=false
 config/debug/user_name=""
 config/debug/user_token=""
+
+[global_group]
+
+interactable="Things that can be interacted"
 
 [importer_defaults]
 

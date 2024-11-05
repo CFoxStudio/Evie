@@ -17,6 +17,7 @@ func _ready():
 	evie_npc = $EvieButNPC
 
 func _process(delta):
+	# A small testing quest
 	if GameUtils.is_inside_area($QuestGodots/Godot1, $Player):
 		if Input.is_action_just_pressed("interact") and !godot1_found:
 			godot1_found = true
@@ -25,6 +26,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("interact") and !godot2_found:
 			godot2_found = true
 			QuestManager.add_progress("Godot Fan", 1)
+	
+	# Test (meme) cutscene
 	if evie_npc and GameUtils.is_inside_area($EvieButNPC, $Player):
 		if Input.is_action_just_pressed("interact"):
 			var evie_cutscene = [

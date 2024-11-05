@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj61sx7xlcifn"]
+[gd_scene load_steps=4 format=3 uid="uid://dj61sx7xlcifn"]
 
 [ext_resource type="Theme" uid="uid://dny81bwjm036y" path="res://themes/MainTheme.tres" id="1_klcc7"]
 [ext_resource type="Script" path="res://scripts/menus/MainMenu.gd" id="2_ml8au"]
+[ext_resource type="AudioStream" uid="uid://dt1n60d61kmhf" path="res://assets/music/menus/main_menu.mp3" id="3_1r3vt"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,7 +19,7 @@ script = ExtResource("2_ml8au")
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 192.0
+offset_right = 256.0
 grow_vertical = 2
 
 [node name="MainButtons" type="VBoxContainer" parent="CanvasLayer/Panel"]
@@ -58,6 +59,24 @@ text = "Exit"
 alignment = 0
 metadata/_edit_lock_ = true
 
+[node name="GameNameLabel" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 64
+text = "Evie"
+
+[node name="GameVersionLabel" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.011
+anchor_right = 0.5
+anchor_bottom = 0.011
+offset_top = 0.0799994
+offset_right = 40.0
+offset_bottom = 23.08
+
 [node name="GameJoltButton" type="Button" parent="CanvasLayer"]
 anchors_preset = 1
 anchor_left = 1.0
@@ -75,6 +94,10 @@ theme_override_colors/font_color = Color(0.8, 1, 0, 1)
 disabled = true
 text = "Game Jolt"
 alignment = 2
+
+[node name="MenuMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1r3vt")
+bus = &"Music"
 
 [connection signal="pressed" from="CanvasLayer/Panel/MainButtons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/MainButtons/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -21,6 +21,7 @@ func _on_exit_button_pressed():
 	SaveManager.save_game(ch.chapter_num, ch.act_num)
 	SceneTransition.fade("res://scenes/menus/MainMenu.tscn")
 
+# Update Quest list
 func update_quest_display():
 	var quest_list: ItemList = $Quests/QuestList
 	quest_list.clear()
@@ -32,10 +33,9 @@ func update_quest_display():
 		quest_list.add_item(progress_text)
 	quest_descriptions = quest_data
 
+# Show Quest Description on click
 func _on_quest_selected(index):
 	var quest_name = $Quests/QuestList.get_item_text(index).split(" (")[0]
 	if quest_name in quest_descriptions:
 		var quest_info = quest_descriptions[quest_name]
 		$Quests/QuestList.set_item_text(index, quest_info["desc"])
-	else:
-		$Quests/QuestList.text = "Description not available."

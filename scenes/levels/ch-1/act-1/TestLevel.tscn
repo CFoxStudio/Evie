@@ -31,7 +31,7 @@ tile_set = ExtResource("1_2qhos")
 
 [node name="QuestGodots" type="Node2D" parent="."]
 
-[node name="Godot1" type="Area2D" parent="QuestGodots"]
+[node name="Godot1" type="Area2D" parent="QuestGodots" groups=["interactable"]]
 position = Vector2(578, 425)
 
 [node name="Sprite2D" type="Sprite2D" parent="QuestGodots/Godot1"]
@@ -43,7 +43,7 @@ metadata/_edit_lock_ = true
 shape = SubResource("CircleShape2D_unmxv")
 metadata/_edit_lock_ = true
 
-[node name="Godot2" type="Area2D" parent="QuestGodots"]
+[node name="Godot2" type="Area2D" parent="QuestGodots" groups=["interactable"]]
 position = Vector2(245, 399)
 
 [node name="Sprite2D" type="Sprite2D" parent="QuestGodots/Godot2"]
@@ -55,7 +55,7 @@ metadata/_edit_lock_ = true
 shape = SubResource("CircleShape2D_unmxv")
 metadata/_edit_lock_ = true
 
-[node name="EvieButNPC" type="Area2D" parent="."]
+[node name="EvieButNPC" type="Area2D" parent="." groups=["interactable"]]
 position = Vector2(520, 120)
 
 [node name="Sprite2D" type="Sprite2D" parent="EvieButNPC"]

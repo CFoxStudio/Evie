@@ -36,6 +36,7 @@ func unpause_game():
 	get_tree().paused = false
 	is_paused = false
 
+# Gets Chapter and Act info 
 func chapter_info():
 	var chapter_node = get_tree().get_current_scene().get_node_or_null("ChapterNode")
 	if pause_menu_instance != null:

@@ -45,6 +45,7 @@ func _process_next_action() -> void:
 			await get_tree().create_timer(action["time"]).timeout
 			_process_next_action()
 
+# Move NPC (with a normal animation, etc.)
 func _move_npc(npc: Node2D, target_position: Vector2, speed: float) -> void:
 	var direction = (target_position - npc.position).normalized()
 	var distance = npc.position.distance_to(target_position)
@@ -62,6 +63,7 @@ func _move_npc(npc: Node2D, target_position: Vector2, speed: float) -> void:
 		animation_tree.get("parameters/playback").call("travel", "Idle")
 	_process_next_action()
 
+# Move NPC (without animation, like a simple jump)
 func _animate_npc(npc: Node2D, animation_type: String, target_position: Vector2, speed: float) -> void:
 	match animation_type:
 		"jump":
@@ -85,6 +87,7 @@ func _animate_npc(npc: Node2D, animation_type: String, target_position: Vector2,
 			await move_tween.finished
 	_process_next_action()
 
+# Remove NPC from the scene
 func _destroy_npc(npc: Node2D) -> void:
 	npc.queue_free()
 	_process_next_action()
