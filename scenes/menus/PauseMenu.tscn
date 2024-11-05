@@ -73,5 +73,22 @@ grow_vertical = 0
 text = "00:00:00"
 vertical_alignment = 2
 
+[node name="Quests" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -448.0
+offset_bottom = 128.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="Quests"]
+layout_mode = 2
+text = "Active Quests:"
+horizontal_alignment = 2
+
+[node name="QuestList" type="ItemList" parent="Quests"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
 [connection signal="pressed" from="Center/Buttons/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Center/Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
