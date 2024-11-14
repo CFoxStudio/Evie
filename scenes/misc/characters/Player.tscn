@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c760d8xvto2hb"]
+[gd_scene load_steps=31 format=3 uid="uid://c760d8xvto2hb"]
 
 [ext_resource type="Script" path="res://scripts/misc/player/Player.gd" id="1_in2gg"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="2_rpyk7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dh0iotxag6tue" path="res://assets/3rdparty/onscreenControls/Sprites/flatDark/flatDark47.png" id="4_iroo5"]
 [ext_resource type="Texture2D" uid="uid://c4su2yo66gtoj" path="res://assets/3rdparty/onscreenControls/Sprites/flatDark/flatDark13.png" id="5_j3n88"]
 [ext_resource type="Texture2D" uid="uid://wxvt3l0i2esq" path="res://assets/3rdparty/onscreenControls/Sprites/flatDark/flatDark24.png" id="6_8hmj4"]
+[ext_resource type="PackedScene" uid="uid://cmrfdlp25wcby" path="res://addons/simply-console/scenes/console-window/console_window.tscn" id="7_vrxlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1weqv"]
 size = Vector2(19, 48)
@@ -286,3 +287,6 @@ shape = SubResource("CircleShape2D_s7k8b")
 action = "sprint"
 visibility_mode = 1
 metadata/_edit_lock_ = true
+
+[node name="ConsoleWindow" parent="UI" instance=ExtResource("7_vrxlu")]
+visible = false

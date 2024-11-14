@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 100
 @export var sprint_multiplier: float = 1.3
+@onready var console = $UI/ConsoleWindow
 
 var can_move: bool = true
 var cutscene_manager = null
@@ -27,6 +28,10 @@ func _physics_process(delta):
 			$AnimationTree.get("parameters/playback").travel("Idle")
 	
 	move_and_slide()
+
+func _input(event):
+	if event.is_action_pressed("console"):
+		console.visible = !console.visible
 
 func allow_movement(allow: bool):
 	can_move = allow
