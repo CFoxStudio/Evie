@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=4 uid="uid://d0scq2kiik7eg"]
 
 [ext_resource type="TileSet" uid="uid://bmvirlxj6k75g" path="res://tilesets/Ground.tres" id="1_2qhos"]
-[ext_resource type="Script" path="res://scripts/levels/ch-1/act-1/TestLevel.gd" id="1_6wakj"]
+[ext_resource type="Script" uid="uid://b0nogth75m3wt" path="res://scripts/levels/ch-1/act-1/TestLevel.gd" id="1_6wakj"]
 [ext_resource type="PackedScene" uid="uid://c760d8xvto2hb" path="res://scenes/misc/characters/Player.tscn" id="2_yp4xu"]
-[ext_resource type="Script" path="res://scripts/custom_nodes/ChapterNode.gd" id="3_ic7en"]
+[ext_resource type="Script" uid="uid://biw62eexocn8h" path="res://scripts/custom_nodes/ChapterNode.gd" id="3_ic7en"]
 [ext_resource type="Texture2D" uid="uid://c478va0nkl3wc" path="res://assets/misc/godot.svg" id="5_fa7ng"]
-[ext_resource type="Script" path="res://scripts/misc/utils/CutsceneManager.gd" id="6_5iufs"]
+[ext_resource type="Script" uid="uid://dfgbfrsk1hwar" path="res://scripts/misc/utils/CutsceneManager.gd" id="6_5iufs"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="6_eohsa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_unmxv"]

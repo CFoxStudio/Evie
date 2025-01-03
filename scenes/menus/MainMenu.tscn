@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj61sx7xlcifn"]
 
 [ext_resource type="Theme" uid="uid://dny81bwjm036y" path="res://themes/MainTheme.tres" id="1_klcc7"]
-[ext_resource type="Script" path="res://scripts/menus/MainMenu.gd" id="2_ml8au"]
+[ext_resource type="Script" uid="uid://ce185ihgsays3" path="res://scripts/menus/MainMenu.gd" id="2_ml8au"]
 [ext_resource type="AudioStream" uid="uid://dt1n60d61kmhf" path="res://assets/music/menus/main_menu.mp3" id="3_1r3vt"]
 
 [node name="MainMenu" type="Control"]
@@ -89,8 +89,8 @@ grow_horizontal = 0
 focus_neighbor_top = NodePath("../Panel/MainButtons/ExitButton")
 focus_neighbor_bottom = NodePath("../Panel/MainButtons/ExitButton")
 theme = ExtResource("1_klcc7")
-theme_override_colors/font_focus_color = Color(0.184314, 0.498039, 0.435294, 1)
 theme_override_colors/font_color = Color(0.8, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0.184314, 0.498039, 0.435294, 1)
 disabled = true
 text = "Game Jolt"
 alignment = 2

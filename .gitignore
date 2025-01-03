@@ -8,3 +8,7 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+
+scenes/combat/
+
+scripts/combat/

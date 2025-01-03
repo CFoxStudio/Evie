@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://c760d8xvto2hb"]
 
-[ext_resource type="Script" path="res://scripts/misc/player/Player.gd" id="1_in2gg"]
+[ext_resource type="Script" uid="uid://deufydhleebq6" path="res://scripts/misc/player/Player.gd" id="1_in2gg"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="2_rpyk7"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_emfa2"]
 [ext_resource type="Texture2D" uid="uid://dh0iotxag6tue" path="res://assets/3rdparty/onscreenControls/Sprites/flatDark/flatDark47.png" id="4_iroo5"]
@@ -111,12 +111,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_54vbi"]
 _data = {
-"RESET": SubResource("Animation_8p12w"),
-"idle": SubResource("Animation_2p1el"),
-"walk_down": SubResource("Animation_o0yth"),
-"walk_left": SubResource("Animation_asg0e"),
-"walk_right": SubResource("Animation_6l1b4"),
-"walk_up": SubResource("Animation_dwncp")
+&"RESET": SubResource("Animation_8p12w"),
+&"idle": SubResource("Animation_2p1el"),
+&"walk_down": SubResource("Animation_o0yth"),
+&"walk_left": SubResource("Animation_asg0e"),
+&"walk_right": SubResource("Animation_6l1b4"),
+&"walk_up": SubResource("Animation_dwncp")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6s8j6"]
@@ -208,7 +208,7 @@ position_smoothing_speed = 3.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_54vbi")
+&"": SubResource("AnimationLibrary_54vbi")
 }
 autoplay = "idle"
 

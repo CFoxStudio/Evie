@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3 uid="uid://bte824gwajidn"]
+
+[ext_resource type="Script" uid="uid://btgpp3turhurk" path="res://addons/evie_character_creator/CharacterCreator.gd" id="1_xvqyu"]
+
+[node name="CharacterCreator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource("1_xvqyu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 692.0
+offset_bottom = 144.0
+
+[node name="NameFaceContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/NameFaceContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Character Name:"
+
+[node name="NameInput" type="LineEdit" parent="VBoxContainer/NameFaceContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+placeholder_text = "Character Name"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/NameFaceContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="FaceLabel" type="Label" parent="VBoxContainer/NameFaceContainer"]
+layout_mode = 2
+text = "Character Face:"
+
+[node name="FaceVBoxContainer" type="VBoxContainer" parent="VBoxContainer/NameFaceContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FaceImagePath" type="LineEdit" parent="VBoxContainer/NameFaceContainer/FaceVBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+editable = false
+
+[node name="BrowseFaceImage" type="Button" parent="VBoxContainer/NameFaceContainer/FaceVBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Browse"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HealthAttackContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HealthAttackLabel" type="Label" parent="VBoxContainer/HealthAttackContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Character Health/Attack:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HealthAttackContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="MaxHealthInput" type="SpinBox" parent="VBoxContainer/HealthAttackContainer/HBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+value = 50.0
+suffix = "HP"
+
+[node name="AttackInput" type="SpinBox" parent="VBoxContainer/HealthAttackContainer/HBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+suffix = "Att"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "Save Character"
+
+[node name="FaceImageDialog" type="FileDialog" parent="VBoxContainer"]
+mode = 1
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0

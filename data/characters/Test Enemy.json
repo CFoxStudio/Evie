@@ -1,0 +1,6 @@
+{
+	"attack": 5.0,
+	"face_image": "res://assets/sprites/characters/evie/faces/evie_happy.png",
+	"max_health": 50.0,
+	"name": "Test Enemy"
+}
