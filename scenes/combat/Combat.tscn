@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpp7uidf5pug6"]
+
+[ext_resource type="Script" uid="uid://br23ym0bydhx3" path="res://scripts/combat/Combat.gd" id="1_g5y84"]
+[ext_resource type="Theme" uid="uid://dny81bwjm036y" path="res://themes/MainTheme.tres" id="1_gxktx"]
+
+[node name="Combat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_g5y84")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="CharacterStats" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_group_ = true
+
+[node name="PlayerStats" type="VBoxContainer" parent="CharacterStats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyStats" type="VBoxContainer" parent="CharacterStats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ActionMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+anchor_left = 0.787
+anchor_top = 0.022
+anchor_right = 0.987
+anchor_bottom = 0.267
+offset_left = 0.639893
+offset_top = 0.159999
+offset_right = 0.639893
+offset_bottom = -0.240021
+
+[node name="AttackButton" type="Button" parent="ActionMenu"]
+layout_mode = 2
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.3
+theme = ExtResource("1_gxktx")
+text = "Attack"
+
+[node name="TargetSelector" type="Panel" parent="."]
+visible = false
+layout_mode = 2
+anchor_left = 0.787
+anchor_top = 0.267
+anchor_right = 0.987
+anchor_bottom = 0.511
+offset_left = 0.639893
+offset_top = -0.240021
+offset_right = 0.639893
+offset_bottom = 0.0799866
+
+[node name="TargetList" type="VBoxContainer" parent="TargetSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+size_flags_vertical = 3

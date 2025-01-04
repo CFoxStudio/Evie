@@ -1,7 +1,7 @@
 {
 	"attack": 10.0,
+	"current_health": 50.0,
 	"face_image": "res://assets/sprites/characters/evie/faces/evie_normal.png",
 	"max_health": 50.0,
-	"current_health": 50.0,
 	"name": "Evie"
 }

@@ -27,6 +27,12 @@ func _process(delta):
 			godot2_found = true
 			QuestManager.add_progress("Godot Fan", 1)
 	
+	if GameUtils.is_inside_area($CombatTest, $Player):
+		if Input.is_action_just_pressed("interact"):
+			var player_paths = ["res://data/characters/Evie.json"]
+			var enemy_paths = ["res://data/characters/Test Enemy.json"]
+			CombatManager.start_combat(player_paths, enemy_paths)
+	
 	# Test (meme) cutscene
 	if evie_npc and GameUtils.is_inside_area($EvieButNPC, $Player):
 		if Input.is_action_just_pressed("interact"):

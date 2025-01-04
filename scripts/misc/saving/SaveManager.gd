@@ -2,6 +2,7 @@ extends Node
 
 var chapter: int = 0
 var act: int = 0
+var player_party: Array = []
 
 const SAVE_PATH = "user://save/save.json"
 
@@ -9,11 +10,12 @@ func save_game(ch: int, a: int):
 	# Prepare save data
 	var save_data = {
 		"chapter": ch,
-		"act": a
+		"act": a,
+		"player_party": player_party
 	}
 	chapter = ch
 	act = a
-	
+
 	# Ensure save directory exists
 	var dir = DirAccess.open("user://save")
 	if not dir:
@@ -31,17 +33,19 @@ func load_game():
 		var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 		var content = file.get_as_text()
 		var save_data = JSON.parse_string(content)
-		
-		# Set chapter and act from save data
+
+		# Set chapter, act, and player party from save data
 		chapter = save_data.get("chapter", 0)
 		act = save_data.get("act", 0)
+		player_party = save_data.get("player_party", [])
 		file.close()
 		print("Game loaded: Chapter %d, Act %d" % [chapter, act])
 	else:
 		print("No save file found. Starting fresh.")
 		chapter = 0
 		act = 0
-	
+		player_party = []
+
 	# Load scene based on loaded chapter and act
 	load_scene_from_save()
 

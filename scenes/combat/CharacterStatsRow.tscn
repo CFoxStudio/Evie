@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bnfsuslqkife7"]
+
+[node name="CharacterStatRow" type="HBoxContainer"]
+offset_right = 128.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+
+[node name="FaceImage" type="TextureRect" parent="."]
+layout_mode = 2
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="HPBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0

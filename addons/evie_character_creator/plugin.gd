@@ -25,7 +25,7 @@ func _get_plugin_icon() -> Texture2D:
 	return resized_texture
 
 func _get_plugin_name() -> String:
-	return "Character Creator"
+	return "Char Creator"
 
 func _make_visible(visible: bool) -> void:
 	if not editor_view:

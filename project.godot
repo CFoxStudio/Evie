@@ -30,7 +30,6 @@ GameJolt="*res://addons/gamejolt/gamejolt.gd"
 GameJoltHelper="*res://scripts/misc/utils/GameJoltHelper.gd"
 ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 ConsoleDataManager="*res://addons/simply-console/singletons/console_data_manager.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 SceneTransition="*res://scenes/misc/utils/SceneTransition.tscn"
 PauseManager="*res://scripts/misc/utils/PauseManager.gd"
 SaveManager="*res://scripts/misc/saving/SaveManager.gd"
@@ -38,6 +37,7 @@ AchievementManager="*res://scripts/misc/saving/AchievementManager.gd"
 QuestManager="*res://scripts/misc/saving/QuestManager.gd"
 GameUtils="*res://scripts/misc/utils/GameUtils.gd"
 CombatManager="*res://scripts/combat/CombatManager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

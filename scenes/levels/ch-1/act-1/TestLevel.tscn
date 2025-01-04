@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://d0scq2kiik7eg"]
+[gd_scene load_steps=12 format=4 uid="uid://d0scq2kiik7eg"]
 
 [ext_resource type="TileSet" uid="uid://bmvirlxj6k75g" path="res://tilesets/Ground.tres" id="1_2qhos"]
 [ext_resource type="Script" uid="uid://b0nogth75m3wt" path="res://scripts/levels/ch-1/act-1/TestLevel.gd" id="1_6wakj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://biw62eexocn8h" path="res://scripts/custom_nodes/ChapterNode.gd" id="3_ic7en"]
 [ext_resource type="Texture2D" uid="uid://c478va0nkl3wc" path="res://assets/misc/godot.svg" id="5_fa7ng"]
 [ext_resource type="Script" uid="uid://dfgbfrsk1hwar" path="res://scripts/misc/utils/CutsceneManager.gd" id="6_5iufs"]
+[ext_resource type="Texture2D" uid="uid://dkhtiuml6ogpf" path="res://assets/sprites/characters/evie/faces/evie_happy.png" id="6_7hh3s"]
 [ext_resource type="Texture2D" uid="uid://n6m7427we6lr" path="res://assets/sprites/characters/evie/evie.png" id="6_eohsa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_unmxv"]
@@ -14,6 +15,9 @@ radius = 24.0208
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r34lv"]
 radius = 14.0
 height = 54.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7hh3s"]
+radius = 38.1182
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_6wakj")
@@ -33,6 +37,7 @@ tile_set = ExtResource("1_2qhos")
 
 [node name="Godot1" type="Area2D" parent="QuestGodots" groups=["interactable"]]
 position = Vector2(578, 425)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="QuestGodots/Godot1"]
 scale = Vector2(0.05, 0.05)
@@ -45,6 +50,7 @@ metadata/_edit_lock_ = true
 
 [node name="Godot2" type="Area2D" parent="QuestGodots" groups=["interactable"]]
 position = Vector2(245, 399)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="QuestGodots/Godot2"]
 scale = Vector2(0.05, 0.05)
@@ -57,6 +63,7 @@ metadata/_edit_lock_ = true
 
 [node name="EvieButNPC" type="Area2D" parent="." groups=["interactable"]]
 position = Vector2(520, 120)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="EvieButNPC"]
 texture = ExtResource("6_eohsa")
@@ -67,8 +74,19 @@ frame = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EvieButNPC"]
 shape = SubResource("CapsuleShape2D_r34lv")
 
+[node name="CombatTest" type="Area2D" parent="." groups=["interactable"]]
+position = Vector2(385, 182)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CombatTest"]
+texture = ExtResource("6_7hh3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CombatTest"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_7hh3s")
+
 [node name="Player" parent="." instance=ExtResource("2_yp4xu")]
-position = Vector2(150, 100)
+position = Vector2(171, 108)
 
 [node name="CutsceneManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("6_5iufs")
